@@ -9,6 +9,12 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta property="og:description" content="{{ .Site.Params.description }}" />
   <meta name="author" content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src https://*; img-src https://*; child-src 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <meta name="referrer" content="origin">
+
   <!-- Bootstrap core CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
