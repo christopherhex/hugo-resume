@@ -1,0 +1,27 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+  <div class="my-auto" id="skills-content">
+    <h2 class="mb-5">Vind Ik Leuk</h2>
+    <div class="card-columns">
+
+      {{ range sort (where $.Site.Data.likes.items "featured" true) "priority" "desc" }}
+      <div class="card">
+        <img src="{{ .image }}" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h6 class="card-subtitle">
+            {{ range first 1 (where $.Site.Data.likes.groups "id" .group) }}
+            <i class="{{ .icon }}"></i> {{ .name }}
+            {{ end }}
+          </h6>
+          <h5 class="card-title">{{ .title }}</h5>
+          <p class="card-text">{{ .content }}</p>
+          {{ if .link }}
+          <a href="{{ .link }}" target="_blank" class="card-link">Link</a>
+          {{ end }}
+        </div>     
+      </div>
+      {{ end }}
+
+ 
+    </div>
+  </div>
+</section>

@@ -15,6 +15,11 @@
         <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About</a>
       </li>
       {{ end }}
+      {{ if .Site.Params.showLikes }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#like">Vind ik leuk</a>
+          </li>
+      {{ end }}
       {{ if .Site.Params.showSkills }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>

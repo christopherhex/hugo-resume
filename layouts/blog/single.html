@@ -5,6 +5,7 @@
     <h2 class="mb-0"><span class="text-primary">{{ .Title }}</span></h2>
     <span class="text-primary">{{ .Date.Format "January 2, 2006" }}</span>
     {{ .Content }}
+    {{ partial "footer/blog" . }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
   </div>
