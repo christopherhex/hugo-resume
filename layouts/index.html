@@ -4,6 +4,7 @@
        {{ partial "portfolio/skills.html" . }}
    {{ end }}
    {{ if .Site.Params.showLikes }}
+       {{ .Scratch.Set "sectionId" "like" }}
        {{ partial "likes.html" . }}
    {{ end }}
    {{ if .Site.Params.showProjects }}
